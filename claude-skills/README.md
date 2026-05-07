@@ -11,8 +11,8 @@ explicit.
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -r tools/claude-skills/ba-totp-uat-harness ~/.claude/skills/
-cp -r tools/claude-skills/uat-harness         ~/.claude/skills/
+cp -r claude-skills/ba-totp-uat-harness ~/.claude/skills/
+cp -r claude-skills/uat-harness         ~/.claude/skills/
 ```
 
 After that, in any other repo:
@@ -50,16 +50,13 @@ on BA projects too without it being any slower.
 
 ## Updating
 
-These skills were initially derived from forqsite's own e2e harness
-(`/e2e/`). If you discover an improvement while using them on another
-project, update the copy in `~/.claude/skills/<skill>/`, then mirror the
-fix back here so it ships with this repo on the next checkout.
+If you discover an improvement while using a skill on a project, update
+the copy in `~/.claude/skills/<skill>/`, then mirror the fix back here
+so it ships with this repo on the next checkout.
 
 ## Why not `.claude/skills/`?
 
 `.claude/skills/` is the project-scoped skill location — Claude Code
-auto-loads anything under it when running in that repo. forqsite already
-has its own `e2e/` harness; auto-loading "scaffold a UAT harness" here
-would suggest doing work that's already done. Keeping the skills under
-`tools/claude-skills/` makes them obviously transit material, copy-out
-only.
+auto-loads anything under it when running in that repo. Keeping the
+skills under `claude-skills/` makes them obviously transit material,
+copy-out only.

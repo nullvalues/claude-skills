@@ -74,7 +74,7 @@ and require no edits. Do not introduce hardcoded credentials.
 ## Verification
 
 1. Read each file you created and confirm there are no `{{PLACEHOLDER}}`
-   strings or stray references to `forqsite`/`dev@forqsite.test`/port 6020.
+   strings or hardcoded credentials.
 2. Tell the operator the run sequence:
    ```
    pnpm install
