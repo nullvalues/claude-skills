@@ -1,0 +1,11 @@
+{
+  "_comment": "Merge into the target project's package.json. The driver may require additional deps (e.g. otplib for TOTP, crypto helpers for WebAuthn) — add them when you select or write the driver.",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  },
+  "scripts": {
+    "test:fixture-init": "dotenv -e .env.local -- tsx e2e/fixture-init.ts",
+    "e2e": "dotenv -e .env.local -- playwright test --config e2e/playwright.config.ts",
+    "e2e:ui": "dotenv -e .env.local -- playwright test --config e2e/playwright.config.ts --ui"
+  }
+}

@@ -1,0 +1,9 @@
+# ==========================================================================
+# E2E TEST ADMIN — credentials used by the Playwright UAT harness.
+# Set TEST_ADMIN_EMAIL/PASSWORD to whatever your bootstrap script creates.
+# After bootstrap, run `pnpm test:fixture-init` once to enrol TOTP via
+# Better Auth and persist the secret to e2e/.env.fixture (gitignored).
+# Then `pnpm e2e` runs the suite.
+# ==========================================================================
+TEST_ADMIN_EMAIL=
+TEST_ADMIN_PASSWORD=
